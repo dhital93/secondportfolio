@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4d4ac95ad4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./main.css/main.css">
     <title>portfolio</title>
 </head>
@@ -11,9 +12,10 @@
     <section class="main">
         
         <div class="one">
+
             <div class="name">
                 <div class="image">
-                    <img src="./image/budi.JPG" alt="img">
+                    <img src="./image/budi.JPG" alt="img" onclick="display(0)">
                 </div>
                 <div class="details">
                     <h4>Prabin Dhital</h4>
@@ -21,32 +23,179 @@
                 </div>
             </div>
             <div class="portfolio">
+                <div class="menu" id="menu">
                     <ul>
-                        <li><a href="@">PORTFOLIO</a></li>
-                        <li><a href="@">MY OFFER</a></li>
-                        <li><a href="@">CONTACT</a></li>
+                        <li onclick="display(1)"><a href="#">SKILL</a> </li>
+                        <li><a href="#">PROJECT</a></li>
+                        <li onclick="display(2)"><a href="#">CONTACT</a></li>
                     </ul>
                     <ul>
-                        <li><a href="">MY CV</a></li>
+                        <li><a href="#">MY CV</a></li>
                     </ul>
+                </div>
+                    <div class="mobileView">
                     <ul class="socialmedia">
-                        <li><a href="">facebook</a></li>
-                        <li><a href="">instragram</a></li>
-                        <li><a href="">Gmail</a></li>
+                        <li><i class="fab fa-facebook-square icon"></i></li>
+                        <li><i class="fab fa-instagram-square icon"></i></li>
+                        <li><i class="fas fa-envelope-open-text icon"></i></li>
                     </ul>
+                    <div class="hamburgar" id="hamburgar">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                    <div class="cross" id="cross">
+                        <div class="lineone"></div>
+                        <div class="linetwo"></div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="two">
-            <div class="details">
-                <h3>Hi I am Prabin,</h3>
-                <p>a freelancer front-end developer</p>
+        <div class="two" id="two">
+           
+        </div>
+        <div class="three">
+            <div class="clock">
+                <div class="hand hour" id="hour"></div>
+                <div class="hand min" id="min"></div>
+                <div class="hand sec" id="sec"></div>
+                <div class="number1 number">1</div>
+                <div class="number2 number">2</div>
+                <div class="number3 number">3</div>
+                <div class="number4 number">4</div>
+                <div class="number5 number">5</div>
+                <div class="number6 number">9</div>
+                <div class="number7 number">7</div>
+                <div class="number8 number">8</div>
+                <div class="number9 number">9</div>
+                <div class="number10 number">10</div>
+                <div class="number11 number">11</div>
+                <div class="number12 number">12</div>
+                
+        
             </div>
-            <div class="button">
+    
+        </div>
+
+    </section>
+    <script>
+        
+        function display(a){
+            if(a==0){
+            var displays=`<div class="details">
+                <h3>Hi I am Prabin,</h3>
+                <p id="quote">a freelancer front-end developer</p>
+            </div>
+            <div class="button" id="button">
                 <div><span>PORTFOLIO</span></div>
                 <div><span>MY OFFER </span></div>
-            </div>
-        </div>
-    </section>
+            </div>`;
+            document.getElementById('two').innerHTML=displays;
+
+            }
+            else if(a==1){
+                var displays=`<div class="container">
+                <div class="html">
+                    <div class="html-progess"><h5>HTML</h5><h5>80%</h5></div>
+                </div>
+                <div class="html">
+                    <div class="html-progess js"><h5>JS</h5><h5>40%</h5></div>
+                </div>
+                <div class="html">
+                    <div class="html-progess css"><h5>css</h5><h5>50%</h5></div>
+                </div>
+                <div class="html">
+                    <div class="html-progess git"><h5>git</h5><h5>10%</h5></div>
+                </div>
+                <div class="html">
+                    <div class="html-progess bootstrap"><h5>bootstrap</h5><h5>20%</h5></div>
+                </div>
+            </div>`;
+            document.getElementById('two').innerHTML=displays;
+            
+
+            }
+            else if(a==2){
+                var displays=` <div class="containerTwo">
+                <div class="title">
+                    <h4>Contact Me</h4>
+                </div>
+                <div class="details">
+                    <div class="contact email">
+                        <h6>Email:-  </h6><h6><i class="fas fa-envelope-open-text icon"></i> dhital93@gmail.com</h6>
+                    </div>
+                    <div class="contact facebook">
+                        <h6>facebook:-  </h6><h6> 
+                            <i class="fab fa-facebook-square icon"></i> prabin2002@facebook.com</h6>
+                    </div>
+                    <div class="contact insta">
+                        <h6>Instgram:-  </h6><h6> 
+                            <i class="fab fa-instagram-square icon"></i>
+                            prabin2002</h6>
+                    </div>
+                </div>
+            </div>`;
+            document.getElementById('two').innerHTML=displays;
+            
+
+            }
+
+        }
+        window.addEventListener('load',display(0));
+        //quote running per second
+        var quote=['I am a freelacer front-end developer','Android app developer','Creative worker'];
+        var num=0;
+        function nextQuote(){
+            if(num ==0 || num<= quote.length-2){
+                document.getElementById('quote').textContent=quote[num];
+                console.log(num);
+                num +=1;
+
+            }
+            else{
+                document.getElementById('quote').textContent=quote[num];
+                console.log(num);
+                num=0;
+            }
+        }
+        setInterval(nextQuote,1000);
+        //java script of analog clocl
+        const hour= document.getElementById('hour');
+        const min = document.getElementById('min');
+        const sec = document.getElementById('sec');
+
+        setInterval(setClock, 1000);
+        function setClock(){
+            const date= new Date();
+            const Hour= date.getHours() /12;
+            const Min = date.getMinutes() /60;
+            const Sec= date.getSeconds() /60;
+            setRotation(hour,Hour);
+            setRotation(min,Min);
+            setRotation(sec,Sec);
+            
+           
+        }
+         
+         function setRotation(element , rotatonRatio){
+            element.style.setProperty('--rotation', rotatonRatio*360);
+         } 
+         //hamburger menu
+         const menu= document.getElementById('menu');
+         const cross= document.getElementById('cross');
+         const hamburgar = document.getElementById('hamburgar');
+         hamburgar.addEventListener('click',()=>{
+            menu.style.display='flex';
+            hamburgar.style.display='none';
+            cross.style.display='flex';
+         });
+         cross.addEventListener('click',()=>{
+            menu.style.display='none';
+            hamburgar.style.display='block';
+            cross.style.display='none';
+         });
+         
+    </script>
 </body>
 </html>
 

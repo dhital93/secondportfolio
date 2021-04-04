@@ -1,23 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap");
 body {
   padding: 0;
   margin: 0;
   background: url("../image/cover.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
+  background-attachment: fixed;
 }
 .main {
   display: flex;
   height: 100%;
-  height: 750px;
+  height: 600px;
 
   .one {
     //background-color: red;
     //opacity: 0.7;
-    background-color: rgba(255,0,0,0.8);
+    margin: 20px;
+    background-color: rgba(255, 0, 0, 0.8);
     height: 100%;
     width: 25%;
+    border-radius: 20px;
     .name {
       display: flex;
       flex-direction: column;
@@ -26,55 +29,405 @@ body {
         justify-content: center;
         align-items: center;
         img {
-            margin-top: 10px;
+          margin-top: 10px;
           height: 150px;
           width: 150px;
           border-radius: 50%;
           opacity: none;
+          cursor: pointer;
         }
       }
-      .details{
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
+      .details {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-top: -40px;
+        h4 {
+          font-size: 40px;
+          font-weight: bold;
+          color: white;
+        }
+        h6 {
           position: relative;
-          margin-top: -40px;
-          h4{
-              
-              font-size: 40px;
-              font-weight: bold;
-              color: white;
-          }
-          h6{
-              position: relative;
-              margin-top: -35px;
-              font-size: 20px;
-              color: white;
-          }
+          margin-top: -35px;
+          font-size: 20px;
+          color: white;
+        }
       }
     }
   }
-  .portfolio{
-      ul{
-          li{
-              list-style: none;
-              padding: 5px;
-              a{
-                  text-decoration: none;
-                  color: white;
-              }
-          }
-      }
-  }
-  .socialmedia{
-    display: flex;
-    li{
+  .portfolio {
+    ul {
+      li {
+        list-style: none;
         padding: 5px;
+        a {
+          text-decoration: none;
+          color: white;
+          &:hover {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+  .socialmedia {
+    display: flex;
+    li {
+      padding: 5px;
+      i {
+        font-size: 30px;
+        color: white;
+        margin: 5px;
+        cursor: pointer;
+        &:hover {
+          color: wheat;
+          font-size: 35px;
+        }
+      }
     }
   }
 }
 // moving to the seconf div
-.two{
+.two {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  margin: 20px;
+  border-radius: 20px;
+  .details {
+    color: wheat;
+    h3 {
+      font-size: 40px;
+    }
+    p {
+      position: relative;
+      margin-top: -40px;
+      font-size: 30px;
+    }
+  }
+  .button {
+    div {
+      border: 2px solid wheat;
+      width: 110px;
+      display: flex;
+      justify-content: center;
+      margin: 10px;
+      padding: 10px;
+      cursor: pointer;
+      span {
+        color: wheat;
+      }
+    }
+  }
+}
+//1 css for the progess bar
+
+.container {
+  background-color: rgba(255, 255, 255, 0.8);
+  height: 95vh;
+  border-radius: 20px;
+  width: 60%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: slide 5s;
+
+  .html {
+    width: 100%;
+    height: 40px;
+    background-color: red;
+    position: relative;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 10px;
+    .html-progess {
+      background-color: blue;
+      position: absolute;
+      bottom: 0px;
+      width: 80%;
+      height: 40px;
+      color: white;
+      display: flex;
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
+    .js {
+      width: 40%;
+    }
+    .css {
+      width: 50%;
+    }
+    .git {
+      width: 10%;
+    }
+    .bootstrap {
+      width: 20%;
+    }
+  }
+}
+
+@keyframes slide {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 60%;
+  }
+}
+.fa-facebook-square {
+  &:hover {
+    &::after {
+      content: "prabin2002@facebook.com";
+      display: block;
+      background-color: black;
+      color: wheat;
+      position: absolute;
+      font-size: 15px;
+      display: block;
+    }
+  }
+}
+.fa-instagram-square {
+  &:hover {
+    &::after {
+      content: "prabin2002";
+      display: block;
+      background-color: black;
+      color: wheat;
+      position: absolute;
+      font-size: 15px;
+      display: block;
+    }
+  }
+}
+.fa-envelope-open-text {
+  &:hover {
+    &::after {
+      content: "dital93@gmail.com";
+      display: block;
+      background-color: black;
+      color: wheat;
+      position: absolute;
+      font-size: 15px;
+      display: block;
+    }
+  }
+}
+//css for contacat
+.containerTwo {
+  width: 60%;
+  background-color: rgba(255, 255, 255, 0.8);
+  height: 100%;
+  border-radius: 20px;
+  padding: 20px;
+  color: black;
+  .title {
+    display: flex;
+    justify-content: center;
+  }
+  .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .contact {
+      color: black;
+      display: flex;
+      justify-content: space-around;
+      h6 {
+        font-size: 20px;
+        .icon {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}
+//css for the analog clock
+.clock {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: wheat;
+  position: relative;
+  border: 5px solid black;
+}
+
+.number {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+.number1 {
+  transform: rotate(30deg);
+}
+.number2 {
+  transform: rotate(60deg);
+}
+.number3 {
+  transform: rotate(90deg);
+}
+.number4 {
+  transform: rotate(120deg);
+}
+.number5 {
+  transform: rotate(150deg);
+}
+.number6 {
+  transform: rotate(180deg);
+}
+.number7 {
+  transform: rotate(210deg);
+}
+.number8 {
+  transform: rotate(240deg);
+}
+.number9 {
+  transform: rotate(270deg);
+}
+.number10 {
+  transform: rotate(300deg);
+}
+.number11 {
+  transform: rotate(330deg);
+}
+.number12 {
+  transform: rotate(360deg);
+}
+.hand {
+  --rotation: 0;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  width: 20px;
+  height: 50%;
+  transform-origin: bottom;
+  background-color: black;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+}
+.sec {
+  width: 2px;
+  height: 48%;
+  background-color: red;
+}
+.hour {
+  width: 10px;
+  height: 35%;
+  background-color: black;
+}
+.min {
+  width: 7px;
+  height: 45%;
+  background-color: black;
+}
+//for mobile
+@media only screen and (max-width: 800px) {
+  .main{
+    display: flex;
+    flex-direction: column;
+    .one{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      border-radius: 0px;
+      margin: 0px;
+      .portfolio{
+
+        display: flex;
+        flex-direction: column-reverse;
+        .menu{
+          display: none;
+          flex-direction: column-reverse;
+        }
+        .mobileView{
+          display: flex;
+          justify-content: space-between;
+          border-bottom: 5px solid gray;
+          .hamburgar{
+            height: 40px;
+            width: 40px;
+            padding: 5px;
+            cursor: pointer;
+            &:hover{
+              .line{
+              background-color: wheat;
+              }
+            }
+            .line{
+              background-color: white;
+              height: 5px;
+              width: 100%;
+              margin: 5px;
+            
+
+            }
+          }
+          .cross{
+            height: 40px;
+            width: 40px;
+            padding: 5px;
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: space-around;
+            display: none;
+            .lineone{
+              height: 5px;
+              width: 100%;
+              background-color: white;
+             
+              
+
+            }
+            .linetwo{
+              height: 5px;
+              width: 100%;
+              background-color: white;
+             
+              
+              
+              
+            }
+          }
+        }
+      }
+    }
+  }
+  .two{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  .button,.details{
+      display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+    .containerTwo{
+      width: 100%;
+      .details{
+      .contact{
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    }
     
+  }
+  .three{
+    display: none;
+  }
+  
 }
