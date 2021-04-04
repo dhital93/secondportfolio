@@ -101,6 +101,7 @@ body {
   border-radius: 20px;
   .details {
     color: wheat;
+    height: 60px;
     h3 {
       font-size: 40px;
     }
@@ -333,47 +334,44 @@ body {
 }
 //for mobile
 @media only screen and (max-width: 800px) {
-  .main{
+  .main {
     display: flex;
     flex-direction: column;
-    .one{
+    .one {
       display: flex;
       flex-direction: column;
       width: 100%;
       border-radius: 0px;
       margin: 0px;
-      .portfolio{
-
+      .portfolio {
         display: flex;
         flex-direction: column-reverse;
-        .menu{
+        .menu {
           display: none;
           flex-direction: column-reverse;
         }
-        .mobileView{
+        .mobileView {
           display: flex;
           justify-content: space-between;
           border-bottom: 5px solid gray;
-          .hamburgar{
+          .hamburgar {
             height: 40px;
             width: 40px;
             padding: 5px;
             cursor: pointer;
-            &:hover{
-              .line{
-              background-color: wheat;
+            &:hover {
+              .line {
+                background-color: wheat;
               }
             }
-            .line{
+            .line {
               background-color: white;
               height: 5px;
               width: 100%;
               margin: 5px;
-            
-
             }
           }
-          .cross{
+          .cross {
             height: 40px;
             width: 40px;
             padding: 5px;
@@ -383,51 +381,54 @@ body {
             flex-direction: column-reverse;
             justify-content: space-around;
             display: none;
-            .lineone{
+            .lineone {
               height: 5px;
               width: 100%;
               background-color: white;
-             
-              
-
             }
-            .linetwo{
+            .linetwo {
               height: 5px;
               width: 100%;
               background-color: white;
-             
-              
-              
-              
             }
           }
         }
       }
     }
   }
-  .two{
+  .two {
     display: flex;
     justify-content: center;
     align-items: center;
-  .button,.details{
+
+    .details {
       display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    }
-    .containerTwo{
+      flex-direction: column;
+      //justify-content: center;
+      align-items: center;
+      height: 200px;
       width: 100%;
-      .details{
-      .contact{
+      position: relative;
+
+      .button {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
       }
     }
+
+    .containerTwo {
+      width: 100%;
+      .details {
+        .contact {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
     }
-    
   }
-  .three{
+  .three {
     display: none;
   }
-  
 }
