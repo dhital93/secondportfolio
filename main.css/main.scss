@@ -230,6 +230,9 @@ body {
   border-radius: 20px;
   padding: 20px;
   color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   .title {
     display: flex;
     justify-content: center;
@@ -238,6 +241,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
+    margin-top: -50px;
     .contact {
       color: black;
       display: flex;
@@ -333,7 +338,7 @@ body {
   background-color: black;
 }
 //for mobile
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 850px) {
   .main {
     display: flex;
     flex-direction: column;
@@ -420,8 +425,17 @@ body {
 
     .containerTwo {
       width: 100%;
+      height: 110%;
+      .title {
+        display: flex;
+        position: relative;
+        margin-top: -25px;
+      }
       .details {
+        position: relative;
+        margin-top: 40px;
         .contact {
+          margin: -25px;
           display: flex;
           justify-content: space-between;
         }
